@@ -77,14 +77,29 @@ for(let i=0;i<addressBook1.length;i++){
 }
 searchedContact.phoneNumber = "9876543210";
 console.log(searchedContact);
-for(let i=0;i<addressBook1.length;i++){
+/*for(let i=0;i<addressBook1.length;i++){
     if(addressBook1[i].firstName == "Ganesh"){
         addressBook1.splice(i,1);
         break;
     }
 }
 console.log(addressBook1);
+*/
 let numberOfContacts = addressBook1.reduce(function (result,item){
     return result+1;
 },0);
 console.log("Number of contacts are: "+ numberOfContacts);
+
+let contact3 = null;
+try{
+    contact3 = new AddressBookContact("Sai","Rapeti","1-51A,Akp","Anaka","Andhrapradesh","400088","9887665544","abc.xyz@bridgelabz.co.in");
+    console.log(contact2);
+    }catch(e){
+        console.error(e);
+}
+let DuplicatEntries = addressBook1.filter(contact => contact.firstName === contact3.firstName).reduce(function (result,item){ return result+1;},0);
+if(DuplicatEntries == 0){
+    addressBook1.push(contact3);
+}else{
+    console.log(contact3.firstName +" already exists");
+}
