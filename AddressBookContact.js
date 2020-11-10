@@ -77,3 +77,10 @@ for(let i=0;i<addressBook1.length;i++){
 }
 searchedContact.phoneNumber = "9876543210";
 console.log(searchedContact);
+for(let i=0;i<addressBook1.length;i++){
+    if(addressBook1[i].firstName == "Ganesh"){
+        addressBook1.splice(i,1);
+        break;
+    }
+}
+console.log(addressBook1);
