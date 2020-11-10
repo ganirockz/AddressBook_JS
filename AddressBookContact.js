@@ -111,3 +111,9 @@ console.log("Persons in Uttarpradesh "+SameStateArr);
 
 console.log("Number of Pesons in Anaka are: "+SameCityArr.length);
 console.log("Number of persons in Uttarpradesh are: "+SameStateArr.length);
+
+//UC11
+addressBook1.sort(function (a,b) {
+    return a.firstName < b.firstName;
+});
+console.log(addressBook1);
