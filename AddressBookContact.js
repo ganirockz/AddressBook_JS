@@ -105,6 +105,6 @@ if(DuplicatEntries == 0){
 }
 
 let SameCityArr = addressBook1.filter(contact => contact.city === "Anaka");
-console.log(SameCityArr);
+console.log("Persons in Anaka are "+SameCityArr);
 let SameStateArr = addressBook1.filter(contact => contact.state ==="Uttarpradesh");
-console.log(SameStateArr);
+console.log("Persons in Uttarpradesh "+SameStateArr);
