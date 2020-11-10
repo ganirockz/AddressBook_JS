@@ -108,3 +108,6 @@ let SameCityArr = addressBook1.filter(contact => contact.city === "Anaka");
 console.log("Persons in Anaka are "+SameCityArr);
 let SameStateArr = addressBook1.filter(contact => contact.state ==="Uttarpradesh");
 console.log("Persons in Uttarpradesh "+SameStateArr);
+
+console.log("Number of Pesons in Anaka are: "+SameCityArr.length);
+console.log("Number of persons in Uttarpradesh are: "+SameStateArr.length);
