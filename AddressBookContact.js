@@ -68,3 +68,12 @@ try{
     }
 addressBook1.push(contact);
 addressBook1.push(contact2);
+let searchedContact = null;
+for(let i=0;i<addressBook1.length;i++){
+    if(addressBook1[i].firstName == "Ganesh"){
+        searchedContact = addressBook1[i];
+        break;
+    }
+}
+searchedContact.phoneNumber = "9876543210";
+console.log(searchedContact);
