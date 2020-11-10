@@ -52,6 +52,13 @@ class AddressBookContact{
     }
 }
 let addressBook1 = new Array();
+let contact2 = null;
+try{
+    contact2 = new AddressBookContact("Sai","Rapeti","1-51A,Akp","Anak","Uttarpradesh","400008","9887665544","abc.xyz@bridgelabz.co.in");
+    console.log(contact2);
+    }catch(e){
+        console.error(e);
+}
 let contact = null;
 try{
 contact = new AddressBookContact("Ganesh","Rapeti","1-51A,Akp","Anaka","Andhrapradesh","400088","9877665544","abc.xyz@bridgelabz.co.in");
@@ -59,13 +66,6 @@ console.log(contact);
 }catch(e){
     console.error(e);
 }
-let contact2 = null;
-try{
-    contact2 = new AddressBookContact("Sai","Rapeti","1-51A,Akp","Anak","Uttarpradesh","400088","9887665544","abc.xyz@bridgelabz.co.in");
-    console.log(contact2);
-    }catch(e){
-        console.error(e);
-    }
 addressBook1.push(contact);
 addressBook1.push(contact2);
 let searchedContact = null;
@@ -92,7 +92,7 @@ console.log("Number of contacts are: "+ numberOfContacts);
 
 let contact3 = null;
 try{
-    contact3 = new AddressBookContact("Sai","Rapeti","1-51A,Akp","Anaka","Andhrapradesh","400088","9887665544","abc.xyz@bridgelabz.co.in");
+    contact3 = new AddressBookContact("Sai","Rapeti","1-51A,Akp","Anaka","Andhrapradesh","400008","9887665544","abc.xyz@bridgelabz.co.in");
     console.log(contact2);
     }catch(e){
         console.error(e);
@@ -117,3 +117,19 @@ addressBook1.sort(function (a,b) {
     return a.firstName < b.firstName;
 });
 console.log(addressBook1);
+
+//UC12
+addressBook1.sort(function (a,b) {
+    return a.city < b.city;
+});
+console.log(" After sort based on city: "+addressBook1);
+
+addressBook1.sort(function (a,b) {
+    return a.zip < b.zip;
+});
+console.log(" After sort based on zip: "+addressBook1);
+
+addressBook1.sort(function (a,b) {
+    return a.state < b.state;
+});
+console.log(" After sort based on state: "+addressBook1);
