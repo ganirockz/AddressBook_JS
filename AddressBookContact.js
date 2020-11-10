@@ -61,7 +61,7 @@ console.log(contact);
 }
 let contact2 = null;
 try{
-    contact2 = new AddressBookContact("Sai","Rapeti","1-51A,Akp","Anaka","Andhrapradesh","400088","9887665544","abc.xyz@bridgelabz.co.in");
+    contact2 = new AddressBookContact("Sai","Rapeti","1-51A,Akp","Anak","Uttarpradesh","400088","9887665544","abc.xyz@bridgelabz.co.in");
     console.log(contact2);
     }catch(e){
         console.error(e);
@@ -103,3 +103,8 @@ if(DuplicatEntries == 0){
 }else{
     console.log(contact3.firstName +" already exists");
 }
+
+let SameCityArr = addressBook1.filter(contact => contact.city === "Anaka");
+console.log(SameCityArr);
+let SameStateArr = addressBook1.filter(contact => contact.state ==="Uttarpradesh");
+console.log(SameStateArr);
