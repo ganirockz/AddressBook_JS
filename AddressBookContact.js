@@ -84,3 +84,7 @@ for(let i=0;i<addressBook1.length;i++){
     }
 }
 console.log(addressBook1);
+let numberOfContacts = addressBook1.reduce(function (result,item){
+    return result+1;
+},0);
+console.log("Number of contacts are: "+ numberOfContacts);
