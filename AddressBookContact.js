@@ -51,9 +51,20 @@ class AddressBookContact{
             ", state: "+this.state+", zip: "+this.zip+", phone number: "+this.phoneNumber+", email: "+this.email;
     }
 }
+let addressBook1 = new Array();
+let contact = null;
 try{
-let contact = new AddressBookContact("Ganesh","Rapeti","1-51A,Akp","Anaka","Andhrapradesh","400088","9877665544","ab.xyz@bridgelabz.co.in");
+contact = new AddressBookContact("Ganesh","Rapeti","1-51A,Akp","Anaka","Andhrapradesh","400088","9877665544","abc.xyz@bridgelabz.co.in");
 console.log(contact);
 }catch(e){
     console.error(e);
 }
+let contact2 = null;
+try{
+    contact2 = new AddressBookContact("Sai","Rapeti","1-51A,Akp","Anaka","Andhrapradesh","400088","9887665544","abc.xyz@bridgelabz.co.in");
+    console.log(contact2);
+    }catch(e){
+        console.error(e);
+    }
+addressBook1.push(contact);
+addressBook1.push(contact2);
